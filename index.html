@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Border Radius Generator</title>
+    <style>
+        body {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            place-items: center;
+            height: 41rem;
+            overflow: hidden;
+            margin: 0;
+            color: #fafafa;
+            background-color: rgb(36, 36, 36);
+        }
+
+        #values {
+            display: flex;
+            flex-direction: column;
+            gap: 0.5rem;
+        }
+        .square {
+            width: 15rem;
+            height: 15rem;
+            background-color: aqua;
+        }
+
+        .copy {
+            display: flex;
+            justify-content: center;
+            place-items: center;
+            padding: 0.5em;
+            width: 15rem;
+            height: 10rem;
+            background-color: #333333;
+        }
+
+    </style>
+</head>
+<body>
+    <form id="values">
+        <label for="top-right">top-right</label>
+        <input type="number" id="top-right">
+
+        <label for="top-left">top-left</label>
+        <input type="number" id="top-left">
+
+        <label for="bottom-right">bottom-right</label>
+        <input type="number" id="bottom-right">
+
+        <label for="bottom-left">bottom-left</label>
+        <input type="number" id="bottom-left">
+
+        <button type="submit" onclick="borderGenerator()">Gerar</button>
+    </form>
+
+    <div class="square"></div>
+
+    <div class="copy">
+        <p id="clipboard"></p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
